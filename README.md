@@ -1,3 +1,3 @@
 #Lowla
 
-Experimenting with TeamStudio's prelim Lowla
+Experimenting with TeamStudio's preliminary data-sync framework: Lowla.
