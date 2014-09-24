@@ -1,4 +1,3 @@
-lowa-objc-test
-==============
+#Lowla
 
-A test app to experiment with the objective-C LowlaDb API
+Experimenting with TeamStudio's prelim Lowla
