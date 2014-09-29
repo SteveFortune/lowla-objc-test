@@ -5,6 +5,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target "Lowla Obj-C Test" do
 
+pod "lowladb-objc"
+
 end
 
 target "Lowla Obj-C TestTests" do
