@@ -1,1 +1,17 @@
+PODS:
+  - liblowladb (0.0.1)
+  - lowladb-objc (0.0.1):
+    - liblowladb
+
+DEPENDENCIES:
+  - lowladb-objc (from `https://github.com/lowla/lowladb-objc.git`)
+
+EXTERNAL SOURCES:
+  lowladb-objc:
+    :git: https://github.com/lowla/lowladb-objc.git
+
+SPEC CHECKSUMS:
+  liblowladb: 3ab01086268a6a5339ae43c0fa05189941acf53b
+  lowladb-objc: 9b2e76c2ec9863ffbfcbbc01a24f62569dbffbf2
+
 COCOAPODS: 0.34.1

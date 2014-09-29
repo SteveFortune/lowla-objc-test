@@ -5,7 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target "Lowla Obj-C Test" do
 
-pod "lowladb-objc"
+pod "lowladb-objc", :git => "https://github.com/lowla/lowladb-objc.git"
 
 end
 
