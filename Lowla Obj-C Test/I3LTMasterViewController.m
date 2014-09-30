@@ -57,6 +57,8 @@
     [todoBuilder appendString:@"Make some toast" forField:@"body"];
     [todoBuilder appendObject:contact forField:@"contact"];
     
+    LDBObject *todo = [todoBuilder finish];
+
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
