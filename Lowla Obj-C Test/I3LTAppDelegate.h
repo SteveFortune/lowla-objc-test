@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LDBClient.h>
+#import <LDBDb.h>
+
 
 @interface I3LTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) LDBClient *client;
 
 @end

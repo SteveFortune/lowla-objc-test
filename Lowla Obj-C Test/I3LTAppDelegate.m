@@ -7,15 +7,33 @@
 //
 
 #import "I3LTAppDelegate.h"
+#import "I3LTMasterViewController.h"
+
 
 @implementation I3LTAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+
+-(LDBClient *) client{
+
+    if(!_client){
+        _client = [[LDBClient alloc] init];
+    }
+    
+    return _client;
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     splitViewController.delegate = (id)navigationController.topViewController;
+    
+    /** Inject collection dependency into master controller */
+    
+    I3LTMasterViewController *masterController = [splitViewController.viewControllers firstObject];
+    masterController.todoCollection = [[self.client getDatabase:@"db"] getCollection:@"todos"];
+    
     return YES;
 }
 							

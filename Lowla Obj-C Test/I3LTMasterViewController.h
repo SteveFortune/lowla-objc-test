@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LDBCollection.h>
+
 
 @class I3LTDetailViewController;
 
 @interface I3LTMasterViewController : UITableViewController
+
+@property (strong, nonatomic) LDBCollection *todoCollection;
 
 @property (strong, nonatomic) I3LTDetailViewController *detailViewController;
 
