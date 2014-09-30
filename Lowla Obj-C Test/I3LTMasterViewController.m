@@ -9,6 +9,7 @@
 #import "I3LTMasterViewController.h"
 #import "I3LTDetailViewController.h"
 #import <LDBObjectBuilder.h>
+#import <LDBCursor.h>
 
 
 @interface I3LTMasterViewController (){
@@ -45,7 +46,6 @@
 }
 
 -(void) insertNewObject:(id)sender{
-
     
     LDBObjectBuilder *contactBuilder = [[LDBObjectBuilder builder] appendString:@"steve.fortune@icecb.com" forField:@"email"];
     [contactBuilder appendString:@"Steve" forField:@"first_name"];
@@ -59,6 +59,8 @@
     
     LDBObject *todo = [todoBuilder finish];
 
+    [self.todoCollection insert:todo];
+    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -71,8 +73,7 @@
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
 
-    /// @todo How many objects in the collection?
-    return 1;
+    return [[self.todoCollection find] ];
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

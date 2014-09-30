@@ -33,6 +33,7 @@
     
     I3LTMasterViewController *masterController = [splitViewController.viewControllers firstObject];
     masterController.todoCollection = [[self.client getDatabase:@"db"] getCollection:@"todos"];
+
     
     return YES;
 }
