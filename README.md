@@ -7,10 +7,10 @@ Experimenting with TeamStudio's preliminary data-sync framework: Lowla.
 
 Simple set of user requirements that will allow me to explore the API.
 
-- Generic TODO list app
-- User can create TODOs
-- User can delete TODOs
-- User can update TODOs
+- Generic TODO list app: _NOT DONE_
+- User can create TODOs: _NOT DONE_
+- User can delete TODOs: _NOT DONE_
+- User can update TODOs: _NOT DONE_
 
 Other:
 
