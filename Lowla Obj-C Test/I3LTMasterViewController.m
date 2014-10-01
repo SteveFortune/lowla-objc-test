@@ -12,10 +12,10 @@
 #import <LDBCursor.h>
 
 
-@interface I3LTMasterViewController (){
+@interface I3LTMasterViewController()
 
+@property (nonatomic, strong) NSMutableArray *loadedTodos;
 
-}
 @end
 
 
@@ -31,12 +31,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (I3LTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+    self.loadedTodos = [[NSMutableArray alloc] init];
 }
 
 -(void) didReceiveMemoryWarning{
@@ -73,7 +75,7 @@
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger) section{
 
-    return [[self.todoCollection ];
+    return 10;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
